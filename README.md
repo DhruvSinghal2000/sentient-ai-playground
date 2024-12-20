@@ -18,7 +18,7 @@ This repository contains a lightweight AI chatbot application built using the Ve
 
 1. **Clone the repository**: 
 ```bash
-  git clone 
+  git clone https://github.com/DhruvSinghal2000/sentient-ai-playground.git
   cd <repository-folder> 
 ```
 
