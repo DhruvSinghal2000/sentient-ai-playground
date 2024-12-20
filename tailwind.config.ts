@@ -11,7 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        secondaryBackground: "#424242"
       },
+      width: {
+        '1/10': '10%'
+      }
     },
   },
   plugins: [],

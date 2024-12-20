@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sentient GPT 
+This repository contains a lightweight AI chatbot application built using the Vercel AI SDK. The app allows users to engage in conversations with an AI bot and saves the chat history locally using IndexedDB for persistence. It's designed for seamless, real-time interactions with the ability to revisit previous conversations.
+
+## Features Implemented
+- Ability to chat with an open source AI bot (gemini-1.5-flash) , leverages the Vercel AI SDK for intelligent responsive chat interactions
+- Utilizes IndexedDB to store conversations directly in the user's browser, ensuring privacy and offline access.
+- Allows users to save and load conversations for later reference.
+- Smooth real-time chat updates powered by React.
+
+## Tech Stack
+- **Language**: Typescipt
+- **Frontend Framework**:  NextJs (built on top of React)
+- **Package Manager**: NPM
+- **Client Side Database**: IndexedDB (via Browser API) 
+- **Styling**: Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
-
+1. **Clone the repository**: 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone 
+  cd <repository-folder> 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies**
+```bash
+  npm install
+``` 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Run the Application**
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Open in Browser**
 
-## Learn More
+  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Possible upgrades
+- **Implement Cursor-Based Pagination**: Add pagination to the chat interface to load previous messages efficiently, using timestamps as cursors for navigation.
+- **Enhance Offline Support**: Utilize service workers to enable offline functionality, allowing users to chat with the AI and access saved conversations without an internet connection.
+- **Add Code Syntax Highlighting:**: Improve user experience by enabling syntax highlighting for code snippets shared in the chat.
+- **Unit Test Coverage**: Write unit tests to ensure robust functionality and catch potential issues early during development.
