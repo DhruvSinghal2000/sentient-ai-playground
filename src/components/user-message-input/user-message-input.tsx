@@ -26,12 +26,12 @@ export interface IUsedMessageInput {
   ) => void;
 
   /**
-   * Current input(prompt) by the user. 
+   * Current input(prompt) by the user.
    */
   input: string;
 
   /**
-   * Callback triggered when the chat save option is triggered 
+   * Callback triggered when the chat save option is triggered
    */
   onChatSave: () => void;
 
@@ -42,10 +42,10 @@ export interface IUsedMessageInput {
 }
 
 /**
- * React component to display the input field, send button and save button. 
+ * React component to display the input field, send button and save button.
  * Doesn't allow user to send any prompt while bot is loading the response.
  */
-export const UserMessageInput: React.FC<IUsedMessageInput> = React.memo(
+const UserMessageInput: React.FC<IUsedMessageInput> = React.memo(
   ({
     handleInputChange,
     handleSubmit,
@@ -86,3 +86,6 @@ export const UserMessageInput: React.FC<IUsedMessageInput> = React.memo(
     );
   }
 );
+UserMessageInput.displayName = "UserMessageInput";
+
+export { UserMessageInput };

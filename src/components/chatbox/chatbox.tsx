@@ -21,7 +21,7 @@ export interface IChatBoxProps {
  * If the chats are loading a Loading icon is show.
  * Right side messages are from the user and left from the bot.
  */
-export const Chatbox: React.FC<IChatBoxProps> = React.memo(
+const Chatbox: React.FC<IChatBoxProps> = React.memo(
   ({ messages, isLoadingSavedChats }: IChatBoxProps) => {
     return isLoadingSavedChats ? (
       <Loading />
@@ -43,3 +43,6 @@ export const Chatbox: React.FC<IChatBoxProps> = React.memo(
     );
   }
 );
+Chatbox.displayName = "ChatBox"; 
+
+export { Chatbox }; 

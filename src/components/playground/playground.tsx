@@ -1,13 +1,15 @@
 "use client";
 
-import { v4 as uuid } from "uuid";
 import { useChat } from "ai/react";
 import * as React from "react";
-import { Chatbox } from "../chatbox";
-import { UserMessageInput } from "../user-message-input";
-import { ChatsHistory } from "../chats-history";
-import { IChatHistory, IChatMessage } from "@/types";
+import { v4 as uuid } from "uuid";
+
 import { useIndexDbContext } from "@/context";
+import { IChatHistory } from "@/types";
+
+import { Chatbox } from "../chatbox";
+import { ChatsHistory } from "../chats-history";
+import { UserMessageInput } from "../user-message-input";
 
 /**
  * Entry to the chat bot experience, it is the parent component holding the conversation history sidebar , the chat box and the input box.
@@ -66,7 +68,7 @@ export const Playground = () => {
       setMessages([]);
       selectedChat.current = undefined;
     }
-  }, [chatId, setMessages, setIsLoadingSavedChat]);
+  }, [chatId, setMessages, setIsLoadingSavedChat, getConversationForId]);
 
   const className = React.useMemo(() => {
     return isLoadingSavedChat || !messages || !messages.length

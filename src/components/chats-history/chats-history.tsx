@@ -47,7 +47,7 @@ export const ChatsHistory: React.FC<IChatsHistoryProps> = ({
       };
       getHistory().then((val) => setAllChats(val));
     }
-  }, [chatId, isExpanded]);
+  }, [chatId, isExpanded, getPartialConversationDetails]);
 
   /**
    * Callback to handle the request to start a new conversation

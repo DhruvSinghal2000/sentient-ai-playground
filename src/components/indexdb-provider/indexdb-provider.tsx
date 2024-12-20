@@ -8,7 +8,7 @@ import * as React from "react";
 /**
  * High order component to provide indexDB utility function through React context.
  */
-export const IndexdbProvider: React.FC<React.PropsWithChildren<{}>> = ({
+export const IndexdbProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
   /**
@@ -142,7 +142,7 @@ export const IndexdbProvider: React.FC<React.PropsWithChildren<{}>> = ({
    */
   const getPartialConversationDetails = (): Promise<PartialChatHistory[]> => {
     const transaction = db?.transaction(CHATS_HISTORY_STORE, "readwrite");
-    let conversation: PartialChatHistory[] = [];
+    const conversation: PartialChatHistory[] = [];
 
     if (transaction) {
       const request = transaction.objectStore(CHATS_HISTORY_STORE).openCursor();
